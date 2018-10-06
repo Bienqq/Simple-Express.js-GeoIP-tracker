@@ -19,7 +19,6 @@ module.exports = class MyServer {
         //using ejs template engine
         this.app.set('view engine', 'ejs');
 
-
         this.viewsDir = __dirname + "\\public\\views\\"
 
         this.app.listen(port);

@@ -30,6 +30,11 @@
             <button v-on:click="generate">Generate link</button>
             <div class="generated-link"> </div>
             <input v-bind:value="link" type="text" placeholder="generated link" disabled>
+            <div class="link-history">
+                <ul v-html="linkFromHistory"> 
+                   
+                </ul>
+            </div>
 
         </div>
     </div>
