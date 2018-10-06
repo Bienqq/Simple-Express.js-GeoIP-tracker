@@ -4,19 +4,18 @@ const axios = require("axios")
 const UNIQUE_TOKEN_LENGHT = 10
 
 const GEO_IP_API_URL = "http://ip-api.com/json/"
-const SERVER_DOMAIN = "http://www.localhost:8090/tracking/" // hardcoded 
 
 module.exports = class MyServer {
-    constructor(port) {
+    constructor(port, serverAddress) {
         this.app = express()
+        this.serverAddress = serverAddress + "/"
 
         // directory with html, styles, scripts
-        this.app.use(express.static("public"))
+        this.app.use(express.static(__dirname + "/public"))
         // directory with Vue dependencies
-        this.app.use(express.static("../node_modules/vue/dist"))
+        this.app.use(express.static(__dirname + "/../node_modules/vue/dist"))
         //directory with libs to send AJAX request
-        this.app.use(express.static("../node_modules/axios/dist"))
-        
+        this.app.use(express.static(__dirname + "/../node_modules/axios/dist"))
         //using ejs template engine
         this.app.set('view engine', 'ejs');
 
@@ -28,21 +27,23 @@ module.exports = class MyServer {
     init() {
         this.app.get("/index", (request, response) => {
             response.statusCode = 200
+            response.header("Access-Control-Allow-Origin", "*")
             response.render(this.viewsDir + "index")
         });
 
         this.app.get("/generate", (request, response) => {
             response.statusCode = 200
-            var generatedLink = SERVER_DOMAIN + generateUniqueString()
+            response.header("Access-Control-Allow-Origin", "*")
+            var generatedLink = this.serverAddress + "tracking/" + generateUniqueString()
             response.send(generatedLink)
         });
 
         this.app.get("/tracking/:code", (request, response) => {
             response.statusCode = 200
             response.contentType = "text/html"
+            response.header("Access-Control-Allow-Origin", "*")
             var ip = request.connection.remoteAddress;
-            ip = "89.64.54.42" // to be removed
-
+            ip = "89.64.54.42" // hardcoded to be removed
             axios.get(GEO_IP_API_URL + ip).then(responseGeo => {
                 const {
                     city,
@@ -70,6 +71,7 @@ module.exports = class MyServer {
         this.app.get("/*", (request, response) => {
             response.statusCode = 404
             response.header("Content-Type", "text/plain");
+            response.header("Access-Control-Allow-Origin", "*")
             response.send("404 page not found")
         })
     }
