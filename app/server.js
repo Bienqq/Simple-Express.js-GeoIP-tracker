@@ -4,7 +4,7 @@ const axios = require("axios")
 const UNIQUE_TOKEN_LENGHT = 10
 
 const GEO_IP_API_URL = "http://ip-api.com/json/"
-const SERVER_DOMAIN = "http://www.localhost:8090/tracking/"
+const SERVER_DOMAIN = "http://www.localhost:8090/tracking/" // hardcoded 
 
 module.exports = class MyServer {
     constructor(port) {
