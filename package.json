@@ -1,0 +1,22 @@
+{
+  "name": "namierzator",
+  "version": "1.0.0",
+  "description": "Namierzator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "namierzator",
+    "wykrywanie"
+  ],
+  "author": "Tomasz Bieniek",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "vue": "^2.5.17"
+  }
+}

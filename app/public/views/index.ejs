@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Natural tracker</title>
+    <meta name="description" content="Namierzanie czlowiekow">
+    <meta name="keywords" content="namierzanie ip geo  strona">
+    <meta name="author" content="Tomasz Bieniek">
+    <link rel="stylesheet" href="../styles/style.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+    <script src="./vue.min.js"></script>
+    <script src="./axios.min.js"></script>
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+    <div id="vue-app">
+        <div class="navbar">
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="card">
+            <h1>IMPRESSIVE & SIMPLE</h1>
+            <h3>That the way it will work</h3>
+            <button v-on:click="generate">Generate link</button>
+            <div class="generated-link"> </div>
+            <input v-bind:value="link" type="text" placeholder="generated link" disabled>
+
+        </div>
+    </div>
+</body>
+
+</html>

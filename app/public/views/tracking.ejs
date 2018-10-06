@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Natural tracker</title>
+    <meta name="description" content="Namierzanie czlowiekow">
+    <meta name="keywords" content="namierzanie ip geo  strona">
+    <meta name="author" content="Tomasz Bieniek">
+    <link rel="stylesheet" href="../styles/tracking.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+</head>
+
+<body>
+    <div id="vue-app">
+        <div class="navbar">
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="card">
+            <h1>YOU HAVE BEEN TRACKED !</h1>
+            <p>Your IP: <%= data.ip %> </p>
+            <p>Country: <%= data.country %></p>
+            <p>Region: <%= data.regionName %></p>
+            <p>City: <%= data.city %></p>
+            <p>Zip-code: <%= data.zip %></p>
+            <p>Lat: <%= data.lat %></p>
+            <p>Lon: <%= data.lon %></p>
+
+        </div>
+    </div>
+</body>
+
+</html>
