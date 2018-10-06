@@ -2,7 +2,7 @@
   "name": "tracker",
   "license": "MIT",
   "version": "0.0.1",
-  "description": "Sample Express.js GeoIP tracker",
+  "description": "Simple Express.js GeoIP tracker",
   "main": "app.js",
   "scripts": {
     "start": "node app/app.js",
@@ -16,14 +16,13 @@
     "tracking",
     "geoip"
   ],
-  "engines":{
+  "engines": {
     "node": "8.11.2"
   },
   "author": "Tomasz Bieniek",
   "email": "tomek-1996-1996@o2.pl",
   "dependencies": {
     "axios": "^0.18.0",
-    "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "vue": "^2.5.17"

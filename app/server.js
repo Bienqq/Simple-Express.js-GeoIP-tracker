@@ -16,6 +16,7 @@ module.exports = class MyServer {
         this.app.use(express.static("../node_modules/vue/dist"))
         //directory with libs to send AJAX request
         this.app.use(express.static("../node_modules/axios/dist"))
+        
         //using ejs template engine
         this.app.set('view engine', 'ejs');
 
