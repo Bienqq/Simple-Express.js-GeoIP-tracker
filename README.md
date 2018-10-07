@@ -8,5 +8,5 @@ How to run:
 
 1. Run start script eg. "npm start" it will start server application
 2. On "/index" you have start index page. You can generate tracking links and send them to people
-3. When victim clicks tracking link you will his geo ip
+3. When victim clicks tracking link you will see his geo ip 
 4. Enjoy !
