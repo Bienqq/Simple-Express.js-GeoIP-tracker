@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Natural tracker</title>
-    <meta name="description" content="Namierzanie czlowiekow">
-    <meta name="keywords" content="namierzanie ip geo  strona">
+    <meta name="description" content="Tracking geoIP">
+    <meta name="keywords" content="tracking geo ip geoip">
     <meta name="author" content="Tomasz Bieniek">
     <link rel="stylesheet" href="/styles/tracking.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -23,13 +23,27 @@
         </div>
         <div class="card">
             <h1>YOU HAVE BEEN TRACKED !</h1>
-            <p>Your IP: <%= data.ip %> </p>
-            <p>Country: <%= data.country %></p>
-            <p>Region: <%= data.regionName %></p>
-            <p>City: <%= data.city %></p>
-            <p>Zip-code: <%= data.zip %></p>
-            <p>Lat: <%= data.lat %></p>
-            <p>Lon: <%= data.lon %></p>
+            <p>Your IP:
+                <%= data.ip %>
+            </p>
+            <p>Country:
+                <%= data.country %>
+            </p>
+            <p>Region:
+                <%= data.regionName %>
+            </p>
+            <p>City:
+                <%= data.city %>
+            </p>
+            <p>Zip-code:
+                <%= data.zip %>
+            </p>
+            <p>Lat:
+                <%= data.lat %>
+            </p>
+            <p>Lon:
+                <%= data.lon %>
+            </p>
 
         </div>
     </div>
